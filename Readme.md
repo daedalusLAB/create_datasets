@@ -4,11 +4,13 @@ We are going to create a “test” dataset of clips containing the expression: 
 
 First of all, we’ll go to Labyrinth’s CQPweb and search for the term:
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1fe82bf0-ea44-4964-8530-15f05c1f2ffd/7e8b6599-a6c9-4227-adb9-9696dcc5112b/image.png)
+![cqpweb1](https://github.com/user-attachments/assets/10ac21a1-115a-40da-ac26-8386f10fd5cd)
+
 
 Click on “**tabulate**”
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1fe82bf0-ea44-4964-8530-15f05c1f2ffd/0adebf12-7dd4-49ca-a342-764792e65626/image.png)
+![cqpweb2](https://github.com/user-attachments/assets/c7759f07-8da6-4802-81c6-096cac7b585b)
+
 
 In next page you have to:
 
@@ -26,7 +28,7 @@ In next page you have to:
     
 3. Click on “Download query tabulation with settings above”
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1fe82bf0-ea44-4964-8530-15f05c1f2ffd/434f508c-5339-4ebe-b6f0-7661a951001d/image.png)
+![cqpweb3](https://github.com/user-attachments/assets/fb8824bb-34d5-42b1-ae3c-e885f5232453)
 
 You get a file like this: 
 
