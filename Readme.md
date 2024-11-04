@@ -32,9 +32,8 @@ In next page you have to:
 
 You get a file like this: 
 
-[tabulation_before_100.txt](https://prod-files-secure.s3.us-west-2.amazonaws.com/1fe82bf0-ea44-4964-8530-15f05c1f2ffd/3aefd5b5-42a6-4bac-bf4c-a799707f5cc2/tabulation_before_100.txt)
 
-```python
+```csv
 2017-07-21_1000_US_MSNBC_Morning_Joe.txt    t__5c626584_6dfb_11e7_8c64_089e01ba0326    204    61    204    79
 2017-07-21_1000_US_MSNBC_Morning_Joe.txt    t__5c626584_6dfb_11e7_8c64_089e01ba0326    296    83    296    343
 2017-07-21_1000_US_MSNBC_Morning_Joe.txt    t__5c626584_6dfb_11e7_8c64_089e01ba0326    1199    539    1199    799
