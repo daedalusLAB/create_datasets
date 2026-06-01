@@ -56,7 +56,7 @@ On the next page:
 1. Click on Create bigger form.
 2. Fill the attribute fields as follows:
 
-text text_file       Structure text_file text_id         Structure text_id startsecs startcentisecs endsecs endcentisecs 
+```text text_file       Structure text_file text_id         Structure text_id startsecs startcentisecs endsecs endcentisecs ```
 
 3. Click on Download query tabulation with settings above.
 
@@ -86,7 +86,7 @@ Terminal knowledge is required from this point.
 
 First, create the environment and install the dependencies:
 
-bash conda create -n pipeline_datasets python=3.12 -y conda activate pipeline_datasets pip install -r requirements.txt 
+```bash conda create -n pipeline_datasets python=3.12 -y conda activate pipeline_datasets pip install -r requirements.txt ```
 
 External requirements include:
 
@@ -105,37 +105,25 @@ The following examples create datasets for yesterday, today, and tomorrow.
 
 ```bash ./create_dataset.py \   --input tmp/tabulation_yesterday.txt \   --output_folder tmp/yesterday \   --searchterm yesterday \   --offset 2 ```
 
-You will get the dataset in:
+You will get the dataset in: ```tmp/yesterday/dataset.duckdb```
 
-text tmp/yesterday/dataset.duckdb 
-
-The accepted videos will be stored in:
-
-text tmp/yesterday/videos/good 
+The accepted videos will be stored in: ```tmp/yesterday/videos/good```
 
 ## Example: today
 
 ```bash ./create_dataset.py \   --input tmp/tabulation_today.txt \   --output_folder tmp/today \   --searchterm today \   --offset 2 ```
 
-You will get the dataset in:
+You will get the dataset in: ```tmp/today/dataset.duckdb```
 
-text tmp/today/dataset.duckdb 
-
-The accepted videos will be stored in:
-
-text tmp/today/videos/good 
+The accepted videos will be stored in: ```tmp/today/videos/good```
 
 ## Example: tomorrow
 
 ```bash ./create_dataset.py \   --input tmp/tabulation_tomorrow.txt \   --output_folder tmp/tomorrow \   --searchterm tomorrow \   --offset 2 ```
 
-You will get the dataset in:
+You will get the dataset in: ```tmp/tomorrow/dataset.duckdb```
 
-text tmp/tomorrow/dataset.duckdb 
-
-The accepted videos will be stored in:
-
-text tmp/tomorrow/videos/good 
+The accepted videos will be stored in: ```tmp/tomorrow/videos/good```
 
 The --offset parameter controls the temporal window around the target expression. For example, --offset 2 extracts approximately two seconds before and two seconds after the queried expression.
 
@@ -155,7 +143,14 @@ The --offset parameter controls the temporal window around the target expression
 # 5. Repository structure
 
 <code>
-create_datasets/ ├── create_dataset.py                  # Main script for creating a dataset from CQPWeb tabulations ├── download_clips.py                  # Utilities for downloading/extracting clips ├── is_there_a_person_in_the_video.py  # OpenPose-based visible-person filtering ├── prepare_words.R                    # Preparation of target expression lists ├── max_people_classification.R        # Auxiliary R script for person-count classification ├── requirements.txt                   # Python dependencies ├── exec.sh                            # Example shell execution └── speech_analysis/                   # Additional scripts for speech-related processing 
+create_datasets/ ├── create_dataset.py                  # Main script for creating a dataset from CQPWeb tabulations 
+                 ├── download_clips.py                  # Utilities for downloading/extracting clips 
+                 ├── is_there_a_person_in_the_video.py  # OpenPose-based visible-person filtering
+                 ├── prepare_words.R                    # Preparation of target expression lists 
+                 ├── max_people_classification.R        # Auxiliary R script for person-count classification 
+                 ├── requirements.txt                   # Python dependencies 
+                 ├── exec.sh                            # Example shell execution 
+                 └── speech_analysis/                   # Additional scripts for speech-related processing 
 </code>
 
 ---
@@ -165,7 +160,12 @@ create_datasets/ ├── create_dataset.py                  # Main script for 
 A successful run produces a folder such as:
 
 <code>
-tmp/yesterday/ ├── dataset.duckdb ├── videos/ │   ├── good/ │   ├── rejected/ │   └── ... └── metadata/ 
+tmp/yesterday/ 
+              ├── dataset.duckdb 
+              ├── videos/ │   
+              ├── good/ │   
+              ├── rejected/ 
+          │   └── ... └── metadata/ 
 </code>
 
 The exact folder structure may vary depending on the configuration and processing stage.
